@@ -1,0 +1,9 @@
+# never commit these
+*.sqlitedb
+*.conf
+*.key
+*.pem
+ts3server.ini
+query_ip_whitelist.txt
+query_ip_blacklist.txt
+*.log
