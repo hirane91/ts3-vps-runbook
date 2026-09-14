@@ -3,7 +3,7 @@
 # Firewall: deny everything inbound, then open only what's needed.
 #
 # Note what is NOT opened: ServerQuery (10011 / 10022). Those stay bound to
-# # 127.0.0.1 and you reach them over an SSH tunnel. See the README.
+# 127.0.0.1 and you reach them over an SSH tunnel. See the README.
 #
 # Run as root. It will not lock you out of SSH, but read it first anyway.
 
