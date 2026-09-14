@@ -1,0 +1,27 @@
+# /etc/systemd/system/ts3server.service
+#
+# Runs the TeamSpeak 3 server as an unprivileged user, survives reboots.
+# Adjust User/Group and the paths if you installed somewhere other than /home/ts.
+#
+#   systemctl daemon-reload
+#   systemctl enable --now ts3server
+#   systemctl status ts3server
+
+[Unit]
+Description=TeamSpeak 3 Server
+After=network.target
+
+[Service]
+Type=forking
+User=ts
+Group=ts
+WorkingDirectory=/home/ts/teamspeak3-server_linux_amd64
+Environment="TS3SERVER_LICENSE=accept"
+ExecStart=/home/ts/teamspeak3-server_linux_amd64/ts3server_startscript.sh start inifile=ts3server.ini
+ExecStop=/home/ts/teamspeak3-server_linux_amd64/ts3server_startscript.sh stop
+PIDFile=/home/ts/teamspeak3-server_linux_amd64/ts3server.pid
+Restart=always
+RestartSec=15
+
+[Install]
+WantedBy=multi-user.target
