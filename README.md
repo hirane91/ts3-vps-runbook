@@ -246,7 +246,7 @@ If you are running for a community rather than commercially, look at the Non-Pro
 
 ## Roadmap
 
-Longer form docs are coming: a full provisioning walkthrough, the security setup in detail, and a proper gotchas list. The scripts above are the working parts and they are complete.
+Longer form docs are coming: the security setup in detail, upgrading TeamSpeak safely, and a longer gotchas list. The walkthrough and scripts above are complete and tested.
 
 ## Licence
 
