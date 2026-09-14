@@ -10,6 +10,7 @@
 set -euo pipefail
 
 # Every UDP voice port you actually use. One per virtual server.
+# Example for five virtual servers: (9987 9988 9997 9998 9999)
 VOICE_PORTS=(9987)
 FILETRANSFER_PORT=30033
 TSDNS_PORT=41144
